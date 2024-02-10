@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+        <title>Заголовок страницы</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Mono&amp;display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/page.css">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/update_09.02.24.css">
+        <script defer src="js/jquery-3.5.0.min.js"></script>
+        <script defer src="js/swiper-bundle.min.js"></script>
+        <script defer src="js/scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="back-overlay"></div>
+            <div id="search">
+                <form id="search-form" action="/catalog/">
+                    <div class="center">
+                        <input id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off" placeholder="Поиск по каталогу">
+                        <div class="form-control flex">
+                            <button name="s" type="submit"></button>
+                            <div class="close-search"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="header-top">
+                <div class="center">
+                    <div class="top-menu">
+                        <div class="top-menu-items">
+                            <div class="top-menu-item menu-popup header-map-link"><a href="/map/"><img src="/images/map.png" alt=""><span class="text-own-cafe">Карта Сварщицы</span></a></div>
+                            <div class="top-menu-item menu-popup header-ferm-link"><a href="/ferms/"><img src="/images/leaf.png" alt=""><span class="text-own-cafe">Наши фермы</span></a></div>
+                            <div class="top-menu-item menu-popup header-own-coffee-link"><a href="#" data-reveal-id="popup-own-coffee"><i class="icon-own-cafe"></i><span class="text-own-cafe">Наши кафе</span></a></div>
+                            <div class="top-menu-item menu-email"><img src="/images/mail.png" alt=""><a class="email" href="mailto:gastronom@theweldercatherine.ru">gastronom@theweldercatherine.ru</a></div>
+                            <div class="top-menu-item menu-tel"><img src="/images/phone.png" alt=""><a class="phone" href="tel:84956401225">+7 (495) 640 12 25</a></div>
+                            <div class="top-menu-item menu-work-time"><img src="/images/clock.png" alt="">Ежедневно 10<sup>00</sup>-18<sup>00</sup></div>
+                        </div>
+                        <div class="fightblock"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="center"><a class="logo" href="/">
+                        <picture>
+                            <source srcset="images/logo_small_new.svg" media="(max-width: 575px)">
+                            <source srcset="images/logo.svg"><img srcset="images/logo.svg" src="/images/px.png" alt="Сварщица Екатерина">
+                        </picture>
+                        <div class="descriptor slogan"></div></a>
+                    <nav class="menu-maintree">
+                        <div class="parent-menu"><a href="/catalog/">Купить</a>
+                            <div class="inner-nav-new">
+                                <div class="inner-main"><a href="/catalog/dlya_espresso/"><span>Для эспрессо</span></a><a href="/catalog/pod_molochko_1/"><span>Под молочко</span></a><a href="/catalog/dlya_filtra/"><span>Для фильтра</span></a><a href="/catalog/kapsuly/"><span>Капсулы</span></a><a href="/catalog/sempl_boksy/"><span>Сэмпл-боксы</span></a><a href="/catalog/aksessuary/"><span>Аксессуары</span></a><a href="/catalog/drip_kofe/"><span>Дрип кофе</span></a><a href="/catalog/kofe_v_bankakh/"><span>Кофе в банках</span></a><a href="/subscribe/"><span>Подписка</span></a></div>
+                            </div>
+                        </div><a href="/lapsha_na_ushi/"><span>О нас</span></a><a href="/otzivi/"><span>Отзывы (73)</span></a>
+                        <div class="parent-menu"><a href="/loyaltysystem/">Клиентам</a>
+                            <div class="inner-nav-new">
+                                <div class="inner-main"><a href="/loyaltysystem/"><span>Система лояльности</span></a><a href="/optad/"><span>Опт</span></a><a href="/metnemsya_kobanchikom/"><span>Доставка и оплата</span></a></div>
+                            </div>
+                        </div><a href="/blog/"><span>Блог</span></a><a href="/zavarili/"><span>Как заваривать</span></a><a href="/na_derevnyu_deduske/"><span>Контакты</span></a>
+                    </nav>
+                    <div class="bx-basket bx-opener" id="bx_basketFKauiI">
+                        <div id="basrel">
+                            <div class="controls flex flex-center-v"><a class="map-icon-link" href="/map/">
+                                    <div class="map-icon"></div></a><a class="account" href="/sl/?login=yes&amp;amp;backurl=%2F" title="Войти"></a>
+                                <div class="search"></div><a class="bucket flex flex-center-v" href="/bigbrotherwatchingyou/make_order/">
+                                    <div class="icon"></div>
+                                    <div class="info"><b>0 ₽</b> 
+                                         
+                                        0 шт
+                                    </div></a>
+                                <div id="menu-trigger"><i></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                header = document.querySelector('header')
+                
+                window.addEventListener('scroll', event => {
+                    this.scrollY > 60 ? header.classList.add("sticky") : header.classList.remove("sticky")
+                })
+            </script>
+        </header>
+        <main>
+            <section class="page-head">
+                <div class="center">
+                    <h1 class="page-head__title">Авторы</h1>
+                    <div class="page-head__subtitle">Пушкины, Достоевские, Тютчевы...</div>
+                </div>
+            </section>
+            <section class="creators">
+                <div class="center">
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo.jpg" alt=""></div><span class="name">Сергей Митрофанов</span><span class="about">Бренд-менеджер, отвечает за развитие YouTube-канала. </span>
+                        <div class="details"><span>29 статей 117 видео</span><a href="###"><img src="images/ic_soc1.png" alt=""></a><a href="###"><img src="images/ic_soc2.png" alt=""></a></div><a class="button" href="creator.html">Читать статьи Сергея →</a>
+                    </div>
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo_2.jpg" alt=""></div><span class="name">Анастасия Филиппова</span><span class="about">Бренд-менеджер, отвечает за контроль качества.</span>
+                        <div class="details"><span>29 статей 117 видео</span><a href="###"><img src="images/ic_soc1.png" alt=""></a></div><a class="button" href="creator.html">Читать статьи Анастасии →</a>
+                    </div>
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo_3.jpg" alt=""></div><span class="name">Виолетта Ябловская</span><span class="about">Многократная победительница и призерка чемпионатов бариста. Сейчас живет в Португалии и занимается выбором кофе для ассортимента Сварщицы. </span>
+                        <div class="details"><span>29 статей 117 видео</span></div><a class="button" href="creator.html">Читать статьи Виолетты →</a>
+                    </div>
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo.jpg" alt=""></div><span class="name">Сергей Митрофанов</span><span class="about">Бренд-менеджер, отвечает за развитие YouTube-канала. </span>
+                        <div class="details"><span>29 статей 117 видео</span><a href="###"><img src="images/ic_soc1.png" alt=""></a><a href="###"><img src="images/ic_soc2.png" alt=""></a></div><a class="button" href="creator.html">Читать статьи Сергея →</a>
+                    </div>
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo_2.jpg" alt=""></div><span class="name">Анастасия Филиппова</span><span class="about">Бренд-менеджер, отвечает за контроль качества.</span>
+                        <div class="details"><span>29 статей 117 видео</span><a href="###"><img src="images/ic_soc1.png" alt=""></a></div><a class="button" href="creator.html">Читать статьи Анастасии →</a>
+                    </div>
+                    <div class="creator">
+                        <div class="photo"><img src="images/tmp/creator_photo_3.jpg" alt=""></div><span class="name">Виолетта Ябловская</span><span class="about">Многократная победительница и призерка чемпионатов бариста. Сейчас живет в Португалии и занимается выбором кофе для ассортимента Сварщицы. </span>
+                        <div class="details"><span>29 статей 117 видео</span></div><a class="button" href="creator.html">Читать статьи Виолетты →</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-navs-new">
+            <div class="center">
+                <div class="main-footer flex flex-just-b">
+                    <div class="footer-navs footer-first">
+                        <div class="footer-img"><img alt="Кофе с огоньком!" loading="lazy" src="images/logo_in_footer.svg"><img alt="Кофе с огоньком!" style="width: 172px; padding-top: 10px; margin-left: 15px;" loading="lazy" src="images/slogan.gif"></div>
+                        <div class="footer-menu-block">
+                            <div class="footer-menu-block-mini"><a href="/lapsha_na_ushi/">
+                                    <div class="footer-menu-link">О нас</div></a><a href="/blog/">
+                                    <div class="footer-menu-link">Блог </div></a><a href="/map/">
+                                    <div class="footer-menu-link">Карта сварщицы</div></a></div>
+                            <div class="footer-menu-block-mini"><a href="/lapsha_na_ushi/">
+                                    <div class="footer-menu-link">Наши кофейни </div></a><a href="/loyaltysystem/">
+                                    <div class="footer-menu-link">Система лояльности</div></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-navs footer-wrap-shop">
+                        <div class="footer-title">Магазин</div>
+                        <div class="footer-menu-blocks">
+                            <div class="footer-menu-block"><a href="/catalog/dlya_filtra/">
+                                    <div class="footer-menu-link">Фильтр</div></a><a href="/catalog/dlya_espresso/">
+                                    <div class="footer-menu-link">Эспрессо </div></a><a href="/catalog/pod_molochko_1/">
+                                    <div class="footer-menu-link">Под молочко</div></a><a href="/catalog/kapsuly/">
+                                    <div class="footer-menu-link">Капсулы </div></a><a href="/catalog/sempl_boksy/">
+                                    <div class="footer-menu-link">Сэмпл-Боксы</div></a><a href="/catalog/galarastvor/">
+                                    <div class="footer-menu-link">Галараствор</div></a></div>
+                            <div class="footer-menu-block"><a href="/catalog/aksessuary/">
+                                    <div class="footer-menu-link">Аксессуары </div></a><a href="/catalog/drip_kofe/">
+                                    <div class="footer-menu-link">Дрип кофе </div></a><a href="/catalog/kofe_v_bankakh/">
+                                    <div class="footer-menu-link">Кофе в банках </div></a><a href="/catalog/podpiska/">
+                                    <div class="footer-menu-link">Подписка на кофе </div></a><a href="/catalog/arkhiv_kofe/">
+                                    <div class="footer-menu-link">Архив </div></a><a href="https://theweldercatherine.ru/upload/FAQ_TWC.pdf" target="_blank">
+                                    <div class="footer-menu-link">FAQ </div></a></div>
+                        </div>
+                    </div>
+                    <div class="footer-navs footer-wrap-status">
+                        <div class="footer-menu-block-mini">
+                            <div class="footer-title">Розница</div><a href="/metnemsya_kobanchikom/">
+                                <div class="footer-menu-link">Доставка и оплата</div></a>
+                        </div>
+                        <div class="footer-menu-block-mini">
+                            <div class="footer-title">Опт</div><a href="/optad/">
+                                <div class="footer-menu-link">Оптовое предложение</div></a><a href="/sl/?URREG=Y">
+                                <div class="footer-menu-link">Создать личный кабинет </div></a>
+                        </div>
+                    </div>
+                    <div class="footer-navs footer-wrap-pay">
+                        <div class="footer-title">Оплата</div>
+                        <div class="footer-pay">
+                            <div><img src="images/pay-one.png"></div>
+                            <div><img src="images/pay-two.png"></div>
+                        </div>
+                    </div>
+                    <div class="footer-navs footer-wrap-social">
+                        <div class="footer-title">Соц.сети</div>
+                        <div class="footer-social"><a target="_blank" href="https://www.instagram.com/theweldercatherine/">
+                                <div>
+                                    <div class="footer-social--icon footer-social--inst"></div>
+                                    <div class="footer-social--text">Instagram*</div>
+                                </div></a><a target="_blank" href="https://www.youtube.com/channel/UCIMcXL5XK3Yqw-0jBnWxqNQ?view_as=subscriber">
+                                <div>
+                                    <div class="footer-social--icon footer-social--youtube"></div>
+                                    <div class="footer-social--text">Youtube</div>
+                                </div></a><a target="_blank" href="https://vk.com/theweldercatherine">
+                                <div>
+                                    <div class="footer-social--icon footer-social--vkontakte"></div>
+                                    <div class="footer-social--text">Вконтакте</div>
+                                </div></a><a target="_blank" href="https://t.me/theweldercatherine">
+                                <div>
+                                    <div class="footer-social--icon footer-social--tg"></div>
+                                    <div class="footer-social--text">Telegram</div>
+                                </div></a></div>
+                    </div>
+                </div>
+                <div class="sub-footer flex flex-just-b">
+                    <div class="footer-privacy">
+                        <div>Политика обработки <a href="/privacy/">персональных данных</a></div>
+                        <div><a href="/publichnaya-oferta/">Публичная оферта</a></div>
+                    </div>
+                    <div class="footer-copyright">
+                        <p>© 2024 «The Welder Catherine» Все права защищены.</p>
+                    </div>
+                    <div class="footer-empty">
+                        <p>*Организация Meta Platforms Inc. (соцсети Фейсбук, Инстаграм) признана экстремистской, её деятельность запрещена на территории РФ.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

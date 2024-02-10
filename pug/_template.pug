@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+        meta(name="format-detection", content="telephone=no")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+
+        title Заголовок страницы
+
+        meta(name="description", content="")
+        meta(name="keywords", content="")
+
+        link(rel="shortcut icon", href="favicon.ico")
+        link(rel="preconnect", href="https://fonts.googleapis.com")
+        link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap", rel="stylesheet")
+
+        link(rel="stylesheet", href="css/fonts.css")
+        link(rel="stylesheet", href="css/page.css")
+        link(rel="stylesheet", href="css/template.css")
+        link(rel="stylesheet", href="css/swiper-bundle.min.css")
+        link(rel="stylesheet", href="css/styles.css")
+        link(rel="stylesheet", href="css/update_09.02.24.css")
+
+        script(defer, src="js/jquery-3.5.0.min.js")
+        script(defer, src="js/swiper-bundle.min.js")
+        script(defer, src="js/scripts.js")
+    body
+        include _header.pug
+        main
+            block content
+        include _footer.pug
+

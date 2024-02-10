@@ -1,0 +1,177 @@
+extends _template.pug
+
+block content
+    section.page-head
+        div.center
+            div.page-head__global Индустрия
+            h1.page-head__title Кофе с азотом
+            div.page-head__flex._flex
+                div.page-head__items._flex
+                    div.page-head__items-col
+                        div.page-head__item
+                            div.page-head__item-icon
+                                img(src="images/ic_message.png", alt="")
+                            div.page-head__item-text 0
+                        div.page-head__item
+                            div.page-head__item-icon
+                                img(src="images/ic_eye.png", alt="")
+                            div.page-head__item-text 155
+                    div.page-head__items-col
+                        div.page-head__item
+                            div.page-head__item-icon
+                                img(src="images/ic_time.png", alt="")
+                            div.page-head__item-text 7 минут
+                        div.page-head__item
+                            div.page-head__item-icon
+                                img(src="images/ic_date.png", alt="")
+                            div.page-head__item-text 10.11.2023
+                div.page-head__creator._flex
+                    div.page-head__creator-photo
+                        img(src="images/tmp/creator_photo.jpg", alt="")
+                    div.page-head__creator-name Автор: 
+                        br
+                        | Сергей Митрофанов
+            div.page-head__tags #аэропресс #рецепты #aeropress #воронка
+    section.article
+        div.center
+            p
+                |Сварщица Екатерина одна из немногих компаний, которая с самого основания фасует
+                b.more_info кофе
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | с азотом, тем самым увеличивая срок его хранения, без изменения вкуса.
+            p
+                | Азот – это инертный газ, без цвета и запаха. Его используют при упаковке пищевых продуктов для того, чтобы продлить срок их жизни. Азот не влияет напрямую на сам продукт. Он лишь вытесняет кислород из упаковочного материала. А кислород, как мы знаем, главный враг свежеобжаренного кофе, из-за него
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | окисляется и теряет свои вкусо-ароматические качества.
+                br
+                br
+                | Вы наверняка слышали распространенное среди specialty-обжарщиков утверждение, что
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | живет 30-40 дней, а после его пить не стоит. Кофе, запакованный с азотом может жить 3-4 месяца. Поэтому если доставка вашего
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | задерживается, можно не переживать, что вкус испортится.
+                br
+                br
+                img(width="410", alt="азотная установка, или МГС – модифицированная газовая система.jpg", src="images/tmp/article_img_1.jpg", height="410", title="азотная установка, или МГС – модифицированная газовая система.jpg", align="right")
+                | Азотная станция на производстве Сварщицы находится в небольшой комнате с прохладной температурой, потому что компрессоры могут нагреваться до 90°С и для них нужно хорошее охлаждение.
+                br
+                br
+                | Компрессор поставляет воздух для работы генератора азота. Генератор производит обычный кислород, который затем поступает в технологический ресивер и преобразуется в азот.
+                br
+                br
+                | Затем азот поступает в азотный запайщик — самый главный инструмент, который позволяет сохранять наш
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | несколько месяцев. Аппарат работает по такому принципу, что сначала полностью выкачивает кислород из пакета, а затем в него подается азот. Пакет или пачка затем запаивается нагреванием в течение нескольких секунд. После этого остатки газа выкачиваются с помощью пылесоса, на пачку наклеивают этикетку и готово!
+                br
+                br
+                | Остаток газа в
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | мы измеряем с помощью прибора — газоанализатора Checkpoint 3. Мы делаем это, каждый раз, когда фасуем
+                b.more_info  кофе 
+                    span.prompt-desc--info напиток из жареных и перемолотых зёрен кофейного дерева или кофейного куста.
+                | в дрип-пакетах и один раз в неделю проводим на производстве: выборочно берем с полки пачки в 250 гр и 1 кг и замеряем, сколько в них осталось газа. Для дрип-пакетов оптимальный показатель – не более 1% кислорода, в пачке 250 гр – не более 3%.
+            br
+            br
+            h3
+                img(width="307", alt="2.png", src="images/tmp/article_img_2.png", height="218", title="2.png", align="left")
+                | Как происходит замер?
+            p Процедура осуществляется следующим образом: на упаковку наклеивается барьерная наклейка, чтобы избежать поступления лишнего кислорода; затем упаковка пробивается через эту наклейку, и производится замер. Первый замер является пробным, а второй дает окончательный результат.
+    include _comments.pug
+    section.section-call
+        div.center
+            div.section-call__bg
+                div.section-call__title Зарегистрируйтесь или войдите, чтобы оставить комментарий
+                div.section-call__btns._flex
+                    a(href="/", class="section-call__btn") Зарегистрироваться
+                    a(href="/", class="section-call__btn") Войти
+    section.articles
+        div.center
+            h2 Похожие статьи
+            div(class="articles__grid _flex")
+                - for( i = 0; i <=2; i++)
+                    div(class="articles__article")
+                        a(href="/", class="articles__img")
+                            img(src="images/tmp/article_img1.jpg", alt="")
+                        div(class="articles__info") ИНДУСТРИЯ
+                        div(class="articles__title")
+                            a(href="/") Как формируется цена на кофе?
+                        div(class="articles__flex _flex")
+                            div(class="articles__photo")
+                                img(src="images/tmp/creator_photo.jpg", alt="")
+                            div(class="articles__box")
+                                div(class="articles__name")
+                                    a(href="/") — Три самых быстрых способа получить вкусную чашку кофе
+                                div(class="articles__items _flex")
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_message.png", alt="")
+                                        div(class="articles__item-info") 0
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_eye.png", alt="")
+                                        div(class="articles__item-info") 155
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_time.png", alt="")
+                                        div(class="articles__item-info") 7 мин
+                                div(class="articles__tags") #как устроено производство #микролоты #ценообразование #фермы #выращивание кофе
+                    div(class="articles__article")
+                        a(href="/", class="articles__img")
+                            img(src="images/tmp/article_img2.jpg", alt="")
+                        div(class="articles__info") ПРИГОТОВЛЕНИЕ
+                        div(class="articles__title")
+                            a(href="/") Какую воду выбрать для кофе / рецепты
+                        div(class="articles__flex _flex")
+                            div(class="articles__photo")
+                                img(src="images/tmp/creator_photo.jpg", alt="")
+                            div(class="articles__box")
+                                div(class="articles__name")
+                                    a(href="/") — Три самых быстрых способа получить вкусную чашку кофе
+                                div(class="articles__items _flex")
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_message.png", alt="")
+                                        div(class="articles__item-info") 0
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_eye.png", alt="")
+                                        div(class="articles__item-info") 155
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_time.png", alt="")
+                                        div(class="articles__item-info") 7 мин
+                                div(class="articles__tags") #как устроено производство #микролоты #ценообразование #фермы #выращивание кофе
+                    div(class="articles__article")
+                        a(href="/", class="articles__img")
+                            img(src="images/tmp/article_img3.jpg", alt="")
+                        div(class="articles__info") КОФЕЙНОЕ ПРОИЗВОДСТВО
+                        div(class="articles__title")
+                            a(href="/") Как производят кофе в банках, кофе в дрип-пакетах, кофе в капсулах
+                        div(class="articles__flex _flex")
+                            div(class="articles__photo")
+                                img(src="images/tmp/creator_photo.jpg", alt="")
+                            div(class="articles__box")
+                                div(class="articles__name")
+                                    a(href="/") — Три самых быстрых способа получить вкусную чашку кофе
+                                div(class="articles__items _flex")
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_message.png", alt="")
+                                        div(class="articles__item-info") 0
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_eye.png", alt="")
+                                        div(class="articles__item-info") 155
+                                    div(class="articles__item")
+                                        div(class="articles__item-icon")
+                                            img(src="images/ic_time.png", alt="")
+                                        div(class="articles__item-info") 7 мин
+                                div(class="articles__tags") #как устроено производство #микролоты #ценообразование #фермы #выращивание кофе
+            div(class="page-pagination _flex")
+                a(href="/", class="page-pagination__btn") Загрузить больше &amp
+    

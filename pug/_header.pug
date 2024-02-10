@@ -1,0 +1,112 @@
+header
+    div.back-overlay
+    div#search
+        form#search-form(action="/catalog/")
+            div.center
+                input#title-search-input(type="text", name="q", value="", size="40", maxlength="50", autocomplete="off", placeholder="Поиск по каталогу")
+                div.form-control.flex
+                    button(name="s", type="submit")
+                    div.close-search
+    div.header-top
+        div.center
+            div.top-menu
+                div.top-menu-items
+                    div.top-menu-item.menu-popup.header-map-link
+                        a(href="/map/")
+                            img(src="/images/map.png", alt="")
+                            span.text-own-cafe Карта Сварщицы
+                    div.top-menu-item.menu-popup.header-ferm-link
+                        a(href="/ferms/")
+                            img(src="/images/leaf.png", alt="")
+                            span.text-own-cafe Наши фермы
+                    div.top-menu-item.menu-popup.header-own-coffee-link
+                        a(href="#", data-reveal-id="popup-own-coffee")
+                            i.icon-own-cafe
+                            span.text-own-cafe Наши кафе
+                    div.top-menu-item.menu-email
+                        img(src="/images/mail.png", alt="")
+                        a.email(href="mailto:gastronom@theweldercatherine.ru") gastronom@theweldercatherine.ru
+                    div.top-menu-item.menu-tel
+                        img(src="/images/phone.png", alt="")
+                        a.phone(href="tel:84956401225") +7 (495) 640 12 25
+                    div.top-menu-item.menu-work-time
+                        img(src="/images/clock.png", alt="")
+                        | Ежедневно 10
+                        sup 00
+                        | -18
+                        sup 00
+                div.fightblock
+    div.header-bottom
+        div.center
+            a.logo(href="/")
+                picture
+                    source(srcset="images/logo_small_new.svg", media="(max-width: 575px)")
+                    source(srcset="images/logo.svg")
+                    img(srcset="images/logo.svg", src="/images/px.png", alt="Сварщица Екатерина")
+                div.descriptor.slogan
+            nav.menu-maintree
+                div.parent-menu
+                    a(href="/catalog/") Купить
+                    div.inner-nav-new
+                        div.inner-main
+                            a(href="/catalog/dlya_espresso/")
+                                span Для эспрессо
+                            a(href="/catalog/pod_molochko_1/")
+                                span Под молочко
+                            a(href="/catalog/dlya_filtra/")
+                                span Для фильтра
+                            a(href="/catalog/kapsuly/")
+                                span Капсулы
+                            a(href="/catalog/sempl_boksy/")
+                                span Сэмпл-боксы
+                            a(href="/catalog/aksessuary/")
+                                span Аксессуары
+                            a(href="/catalog/drip_kofe/")
+                                span Дрип кофе
+                            a(href="/catalog/kofe_v_bankakh/")
+                                span Кофе в банках
+                            a(href="/subscribe/")
+                                span Подписка
+                a(href="/lapsha_na_ushi/")
+                    span О нас
+                a(href="/otzivi/")
+                    span Отзывы (73)
+                div.parent-menu
+                    a(href="/loyaltysystem/") Клиентам
+                    div.inner-nav-new
+                        div.inner-main
+                            a(href="/loyaltysystem/")
+                                span Система лояльности
+                            a(href="/optad/")
+                                span Опт
+                            a(href="/metnemsya_kobanchikom/")
+                                span Доставка и оплата
+                a(href="/blog/")
+                    span Блог
+                a(href="/zavarili/")
+                    span Как заваривать
+                a(href="/na_derevnyu_deduske/")
+                    span Контакты
+            div.bx-basket.bx-opener(id="bx_basketFKauiI")
+                div#basrel
+                    div.controls.flex.flex-center-v
+                        a.map-icon-link(href="/map/")
+                            .map-icon
+                        a.account(href="/sl/?login=yes&amp;backurl=%2F", title="Войти")
+                        div.search
+                        a.bucket.flex.flex-center-v(href="/bigbrotherwatchingyou/make_order/")
+                            div.icon
+                            div.info
+                                b
+                                    | 0 ₽
+                                | 
+                                | 
+                                | 0 шт
+                        div#menu-trigger
+                            i
+    script.
+        header = document.querySelector('header')
+
+        window.addEventListener('scroll', event => {
+            this.scrollY > 60 ? header.classList.add("sticky") : header.classList.remove("sticky")
+        })

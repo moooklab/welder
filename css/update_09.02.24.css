@@ -1,0 +1,286 @@
+/* Updates 09.02.24 -------------------------------------------------*/
+body {
+  background-color: #F4F4F4;
+  overflow-x: hidden;
+}
+
+header {
+  position: relative;
+  display: contents;
+  z-index: 999;
+}
+header div.header-bottom {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background-color: transparnt;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0);
+  border-bottom: 1px solid hsla(0, 0%, 44%, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (max-width: 575px) {
+  header div.header-bottom {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+header.sticky div.header-bottom {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.025);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.025);
+  background-color: white;
+}
+
+section.page-head {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+section.creators {
+  margin-bottom: 106px;
+}
+section.creators div.center {
+  display: grid;
+  grid-gap: 58px;
+}
+section.creators div.creator {
+  font-family: "PT Mono";
+  display: grid;
+  grid-template-areas: "Photo Name" "Photo About" "Photo Details" "Photo Button";
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 30px 50px;
+}
+section.creators div.creator div.photo {
+  grid-area: Photo;
+  cursor: pointer;
+  position: relative;
+  cursor: pointere;
+  width: 215px;
+  height: 215px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+section.creators div.creator div.photo::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  border: 7px solid transparent;
+  border-radius: 999px;
+}
+section.creators div.creator div.photo:hover::after {
+  border: 7px solid #FFCD00;
+}
+section.creators div.creator div.photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.creators div.creator span.name {
+  grid-area: Name;
+  font-size: 36px;
+  color: black;
+}
+section.creators div.creator span.about {
+  grid-area: About;
+  display: block;
+  font-size: 24px;
+  color: black;
+}
+section.creators div.creator div.details {
+  grid-area: Details;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  grid-gap: 15px;
+  font-size: 24px;
+  color: black;
+}
+section.creators div.creator div.details a {
+  line-height: 0;
+}
+section.creators div.creator a.button {
+  grid-area: Button;
+  justify-self: start;
+  color: #000;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 58px;
+  display: inline-block;
+  padding: 0 22px;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+  border: none;
+  border-radius: 11px;
+  background: #FFCD00;
+}
+section.creators div.creator a.button:hover {
+  color: white;
+  background-color: black;
+}
+
+section.article {
+  font-family: "Pt Mono";
+  font-size: 18px;
+  color: black;
+  margin-bottom: 30px;
+}
+@media (max-width: 575px) {
+  section.article {
+    font-size: 15px;
+  }
+}
+section.article div.center {
+  padding: 50px;
+  background-color: white;
+  max-width: 1600px;
+}
+@media (max-width: 575px) {
+  section.article div.center {
+    padding: 30px 20px;
+  }
+}
+section.article img[align=right] {
+  padding-left: 30px;
+}
+@media (max-width: 575px) {
+  section.article img[align=right] {
+    width: 100%;
+    height: auto;
+    align: center !important;
+    padding: unset;
+  }
+}
+section.article img[align=left] {
+  padding-right: 30px;
+}
+@media (max-width: 575px) {
+  section.article img[align=left] {
+    width: 100%;
+    align: center !important;
+    padding: unset;
+  }
+}
+
+section.comments {
+  font-family: "Pt Mono";
+  font-size: 14px;
+  color: black;
+}
+section.comments div.center {
+  max-width: 1600px;
+  padding: unset;
+}
+section.comments div.upak_comments_cont {
+  display: grid;
+  grid-gap: 3px;
+  width: 100%;
+}
+section.comments div.upak_comments_item {
+  display: grid;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 30px 50px;
+}
+@media (max-width: 575px) {
+  section.comments div.upak_comments_item {
+    padding: 30px 20px;
+  }
+}
+section.comments div.upak_comments_item.v2 {
+  margin-left: 50px;
+}
+@media (max-width: 575px) {
+  section.comments div.upak_comments_item.v2 {
+    margin-left: 20px;
+  }
+}
+section.comments div.upak_comments_author {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: -webkit-max-content 1fr;
+  grid-template-columns: max-content 1fr;
+  grid-gap: 10px;
+}
+section.comments div.upak_comments_author div.upak_comments_author_text {
+  font-size: 12px;
+}
+section.comments div.upak_comments_author div.upak_comments_author_text span {
+  color: #C2C2C2;
+}
+section.comments div.upak_comments_bottom {
+  justify-self: end;
+}
+section.comments a.add_comment {
+  display: block;
+  padding: 5px 12px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 10px;
+  line-height: 1.1em;
+  color: #000000;
+  background: #F7F7F7;
+  border-radius: 999px;
+}
+section.comments a.add_comment:hover {
+  background-color: #e3e3e3;
+  color: #FFCD00;
+  border-bottom: 1px solid rgba(243, 192, 4, 0.1);
+}
+
+section.section-call {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+section.articles h2 {
+  text-align: center;
+  text-transform: unset;
+  font-family: "PT Mono";
+  font-size: 32px;
+}
+
+footer div.center {
+  display: grid;
+  grid-gap: 30px;
+}
+@media (max-width: 575px) {
+  footer div.center {
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  footer div.footer-social div.footer-social--text {
+    display: none;
+  }
+}
+footer div.sub-footer {
+  gap: 20px;
+  padding-left: 12px;
+}
+@media (max-width: 575px) {
+  footer div.sub-footer {
+    gap: 10px;
+  }
+}/*# sourceMappingURL=update_09.02.24.css.map */

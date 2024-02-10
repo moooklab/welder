@@ -1,0 +1,235 @@
+/* Updates 09.02.24 -------------------------------------------------*/
+
+// Media Query
+$breakpoints: ("xs": 480px, "s": 575px, "m": 960px, "l": 1280px, "xl": 1600px, 'xxl': 1920px)
+@mixin screen($breakpoint)
+    @if map-has-key($breakpoints, $breakpoint)
+        $breakpoint: map-get($breakpoints, $breakpoint)
+        @media (max-width: $breakpoint)
+            @content
+    @else
+        @media (max-width: $breakpoint)
+            @content
+
+body
+    background-color: #F4F4F4
+    overflow-x: hidden
+
+header
+    position: relative
+    display: contents
+    z-index: 999
+
+    div.header-bottom
+        padding-top: 20px
+        padding-bottom: 20px
+        position: sticky
+        top: 0
+        z-index: 99
+        background-color: transparnt
+        box-shadow: 0px 0px 50px rgba(0,0,0,.0)
+        border-bottom: 1px solid hsla(0, 0%, 44%, .1)
+        transition: all .3s
+        +screen(s)
+            padding-top: 10px
+            padding-bottom: 10px
+    
+    &.sticky
+        div.header-bottom
+            box-shadow: 0px 0px 50px rgba(0,0,0,.025)
+            background-color: white
+
+section.page-head
+    margin-top: 60px
+    margin-bottom: 60px
+
+section.creators
+    margin-bottom: 106px
+    div.center
+        display: grid
+        grid-gap: 58px
+    div.creator
+        font-family: "PT Mono"
+        display: grid
+        grid-template-areas: 'Photo Name' 'Photo About' 'Photo Details' 'Photo Button'
+        grid-template-columns: max-content 1fr
+        grid-gap: 30px 50px
+        div.photo
+            grid-area:  Photo
+            cursor: pointer
+            position: relative
+            cursor: pointere
+            width: 215px
+            height: 215px
+            border-radius: 999px
+            overflow: hidden
+            &::after
+                content: ''
+                position: absolute
+                top: -1px
+                left: -1px
+                width: calc(100% + 2px)
+                height: calc(100% + 2px)
+                border: 7px solid transparent
+                border-radius: 999px
+            &:hover::after
+                border: 7px solid #FFCD00
+            img
+                width: 100%
+                height: 100%
+                object-fit: cover
+                object-position: center center
+        span.name
+            grid-area: Name
+            font-size: 36px
+            color: black
+        span.about
+            grid-area: About
+            display: block
+            font-size: 24px
+            color: black
+        div.details
+            grid-area: Details
+            width: max-content
+            display: grid
+            align-items: center
+            grid-template-columns: auto
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 15px
+            font-size: 24px
+            color: black
+            a
+                line-height: 0
+        a.button
+            grid-area: Button
+            justify-self: start
+            color: #000
+            font-size: 32px
+            font-weight: 400
+            line-height: 58px
+            display: inline-block
+            padding: 0 22px
+            text-align: center
+            vertical-align: top
+            text-decoration: none
+            border: none
+            border-radius: 11px
+            background: #FFCD00
+            &:hover
+                color: white
+                background-color: black
+
+section.article
+    font-family: 'Pt Mono'
+    font-size: 18px
+    color: black
+    margin-bottom: 30px
+    +screen(s)
+        font-size: 15px
+    
+    div.center
+        padding: 50px
+        background-color: white
+        max-width: 1600px
+        +screen(s)
+            padding: 30px 20px
+
+
+    img[align=right]
+        padding-left: 30px
+        +screen(s)
+            width: 100%
+            height: auto
+            align: center !important
+            padding: unset
+
+    img[align=left]
+        padding-right: 30px
+        +screen(s)
+            width: 100%
+            align: center !important
+            padding: unset
+
+section.comments
+    font-family: 'Pt Mono'
+    font-size: 14px
+    color: black
+
+    div.center
+        max-width: 1600px
+        padding: unset
+        
+    div.upak_comments_cont
+        display: grid
+        grid-gap: 3px
+        width: 100%
+
+    div.upak_comments_item
+        display: grid
+        grid-gap: 10px
+        background-color: white
+        padding: 30px 50px
+        +screen(s)
+            padding: 30px 20px
+
+        &.v2
+            margin-left: 50px
+            +screen(s)
+                margin-left: 20px
+
+    div.upak_comments_author
+        display: grid
+        align-items: center
+        grid-template-columns: max-content 1fr
+        grid-gap: 10px
+        div.upak_comments_author_text
+            font-size: 12px
+            span
+                color: #C2C2C2
+    div.upak_comments_bottom
+        justify-self: end
+
+    a.add_comment
+        display: block
+        padding: 5px 12px
+        width: max-content
+        font-size: 10px
+        line-height: 1.1em
+        color: #000000
+        background: #F7F7F7
+        border-radius: 999px
+        &:hover
+            background-color: #e3e3e3
+            color: #FFCD00
+            border-bottom: 1px solid rgba(243,192,4,.1)
+
+section.section-call
+    margin-top: 30px
+    margin-bottom: 60px
+
+section.articles
+    h2
+        text-align: center
+        text-transform: unset
+        font-family: 'PT Mono'
+        font-size: 32px
+
+footer
+    div.center
+        display: grid
+        grid-gap: 30px
+        +screen(s)
+            grid-gap: 20px
+
+    div.footer-social
+        div.footer-social--text
+            +screen(s)
+                display: none
+
+    div.sub-footer
+        gap: 20px
+        padding-left: 12px
+        +screen(s)
+            gap: 10px
+
