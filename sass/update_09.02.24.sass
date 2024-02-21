@@ -20,6 +20,11 @@ header
     display: contents
     z-index: 999
 
+    div.header-top
+        div.menu-popup
+            a::before
+                bottom: -20px
+
     div.header-bottom
         padding-top: 20px
         padding-bottom: 20px
@@ -45,15 +50,25 @@ section.page-head
 
 section.creators
     margin-bottom: 106px
+
     div.center
         display: grid
         grid-gap: 58px
+        +screen(m)
+            grid-gap: 40px
+        
     div.creator
         font-family: "PT Mono"
         display: grid
         grid-template-areas: 'Photo Name' 'Photo About' 'Photo Details' 'Photo Button'
         grid-template-columns: max-content 1fr
         grid-gap: 30px 50px
+        +screen(m)
+            grid-gap: 15px 30px
+        +screen(s)
+            grid-template-areas: 'Photo' 'Name' 'About' 'Details' 'Button'
+            grid-template-columns: 1fr
+
         div.photo
             grid-area:  Photo
             cursor: pointer
@@ -63,6 +78,10 @@ section.creators
             height: 215px
             border-radius: 999px
             overflow: hidden
+            +screen(m)
+                width: 160px
+                height: 160px
+
             &::after
                 content: ''
                 position: absolute
@@ -79,15 +98,23 @@ section.creators
                 height: 100%
                 object-fit: cover
                 object-position: center center
+
         span.name
             grid-area: Name
             font-size: 36px
             color: black
+            +screen(m)
+                font-size: 24px
+                line-height: 1.5em
+
         span.about
             grid-area: About
             display: block
             font-size: 24px
             color: black
+            +screen(m)
+                font-size: 18px
+
         div.details
             grid-area: Details
             width: max-content
@@ -99,8 +126,11 @@ section.creators
             grid-gap: 15px
             font-size: 24px
             color: black
+            +screen(m)
+                font-size: 18px
             a
                 line-height: 0
+
         a.button
             grid-area: Button
             justify-self: start
@@ -110,12 +140,17 @@ section.creators
             line-height: 58px
             display: inline-block
             padding: 0 22px
-            text-align: center
+            text-align: left
             vertical-align: top
             text-decoration: none
             border: none
             border-radius: 11px
             background: #FFCD00
+            +screen(m)
+                font-size: 24px
+                line-height: 1.7em
+            +screen(s)
+                font-size: 18px
             &:hover
                 color: white
                 background-color: black

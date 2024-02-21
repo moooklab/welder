@@ -9,6 +9,9 @@ header {
   display: contents;
   z-index: 999;
 }
+header div.header-top div.menu-popup a::before {
+  bottom: -20px;
+}
 header div.header-bottom {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -46,6 +49,11 @@ section.creators div.center {
   display: grid;
   grid-gap: 58px;
 }
+@media (max-width: 960px) {
+  section.creators div.center {
+    grid-gap: 40px;
+  }
+}
 section.creators div.creator {
   font-family: "PT Mono";
   display: grid;
@@ -53,6 +61,17 @@ section.creators div.creator {
   grid-template-columns: -webkit-max-content 1fr;
   grid-template-columns: max-content 1fr;
   grid-gap: 30px 50px;
+}
+@media (max-width: 960px) {
+  section.creators div.creator {
+    grid-gap: 15px 30px;
+  }
+}
+@media (max-width: 575px) {
+  section.creators div.creator {
+    grid-template-areas: "Photo" "Name" "About" "Details" "Button";
+    grid-template-columns: 1fr;
+  }
 }
 section.creators div.creator div.photo {
   grid-area: Photo;
@@ -63,6 +82,12 @@ section.creators div.creator div.photo {
   height: 215px;
   border-radius: 999px;
   overflow: hidden;
+}
+@media (max-width: 960px) {
+  section.creators div.creator div.photo {
+    width: 160px;
+    height: 160px;
+  }
 }
 section.creators div.creator div.photo::after {
   content: "";
@@ -90,11 +115,22 @@ section.creators div.creator span.name {
   font-size: 36px;
   color: black;
 }
+@media (max-width: 960px) {
+  section.creators div.creator span.name {
+    font-size: 24px;
+    line-height: 1.5em;
+  }
+}
 section.creators div.creator span.about {
   grid-area: About;
   display: block;
   font-size: 24px;
   color: black;
+}
+@media (max-width: 960px) {
+  section.creators div.creator span.about {
+    font-size: 18px;
+  }
 }
 section.creators div.creator div.details {
   grid-area: Details;
@@ -113,6 +149,11 @@ section.creators div.creator div.details {
   font-size: 24px;
   color: black;
 }
+@media (max-width: 960px) {
+  section.creators div.creator div.details {
+    font-size: 18px;
+  }
+}
 section.creators div.creator div.details a {
   line-height: 0;
 }
@@ -125,12 +166,23 @@ section.creators div.creator a.button {
   line-height: 58px;
   display: inline-block;
   padding: 0 22px;
-  text-align: center;
+  text-align: left;
   vertical-align: top;
   text-decoration: none;
   border: none;
   border-radius: 11px;
   background: #FFCD00;
+}
+@media (max-width: 960px) {
+  section.creators div.creator a.button {
+    font-size: 24px;
+    line-height: 1.7em;
+  }
+}
+@media (max-width: 575px) {
+  section.creators div.creator a.button {
+    font-size: 18px;
+  }
 }
 section.creators div.creator a.button:hover {
   color: white;
