@@ -210,6 +210,14 @@ section.article div.center {
     padding: 30px 20px;
   }
 }
+section.article img {
+  max-width: 100%;
+  height: auto !important;
+}
+section.article iframe {
+  max-width: 100%;
+  height: auto !important;
+}
 section.article img[align=right] {
   padding-left: 30px;
 }
