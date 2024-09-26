@@ -1,0 +1,437 @@
+// Media Query
+$breakpoints: ("xs": 480px, "s": 575px, "m": 960px, "l": 1280px, "xl": 1600px, 'xxl': 1920px)
+@mixin screen($breakpoint)
+    @if map-has-key($breakpoints, $breakpoint)
+        $breakpoint: map-get($breakpoints, $breakpoint)
+        @media (max-width: $breakpoint)
+            @content
+    @else
+        @media (max-width: $breakpoint)
+            @content
+
+body
+    background: white
+
+section.gift
+    margin-top: 70px
+    margin-bottom: 95px
+    +screen(s)
+        margin-top: 32px
+        margin-bottom: 60px
+    
+    div.center
+        &.desktop
+            display: grid
+            grid-template-columns: 540px 1fr
+            grid-template-areas: 'Text Image' 'List List' 'Button Button'
+            align-items: center
+            +screen(s)
+                display: none
+        &.mobile
+            display: none
+            +screen(s)
+                display: grid
+
+    div.desktop
+
+        div.text
+            grid-area: Text
+            h1
+                display: block
+                font-family: Cera Pro, sans-serif
+                text-transform: unset
+                font-weight: 500
+                font-size: 64px
+                color: #000
+                margin-bottom: 26px
+            span
+                display: block
+                font-family: Cera Pro, sans-serif
+                line-height: 1.2em
+                font-weight: 400
+                font-size: 40px
+                color: #000
+                margin-bottom: 3px
+            small
+                display: block
+                font-family: PT Mono, sans-serif
+                font-weight: 400
+                font-size: 20px
+                line-height: 130%
+                color: #000
+
+        div.image
+            grid-area: Image
+            position: relative
+            width: 100%
+            height: 100%
+            img
+                position: absolute
+                top: 50%
+                left: 280px
+                width: 630px
+                height: 630px
+                transform: translate(-50%, -50%)
+
+        div.list
+            grid-area: List
+            counter-reset: list
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 64px
+            margin-top: 68px
+            margin-bottom: 58px
+            div
+                counter-increment: list
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 1fr
+                grid-gap: 21px
+                span
+                    font-family: Cera Pro, sans-serif
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 150%
+                    color: #000
+                &::before
+                    content: counter(list)
+                    display: block
+                    width: 64px
+                    height: 64px
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    text-align: center
+                    font-family: PT Mono, sans-serif
+                    font-weight: 700
+                    font-size: 24px
+                    line-height: 130%
+                    color: #000
+                    background: #FFCC00
+                    border-radius: 999px
+
+        button
+            width: max-content
+            border: unset
+            border-radius: 19px
+            height: 57px
+            background: #ffcd00
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.15), 0 32px 32px 0 rgba(0, 0, 0, 0.13), 0 72px 43px 0 rgba(0, 0, 0, 0.08), 0 128px 51px 0 rgba(0, 0, 0, 0.02), 0 199px 56px 0 rgba(0, 0, 0, 0)
+            font-weight: 400
+            font-size: 18px
+            color: #000
+            padding: 17px 48px
+
+    div.mobile
+
+        div.crumbs
+            display: flex
+            flex-wrap: wrap
+            gap: 5px
+            align-items: center
+            margin-bottom: 32px
+            margin-top: 30px
+
+            div.divide
+                width: 20px
+                height: 1px
+                background: black
+
+            a
+                font-weight: 400
+                font-size: 12px
+                line-height: 130%
+                color: #000
+            
+            span
+                font-weight: 400
+                font-size: 12px
+                line-height: 130%
+                color: #fc0
+
+        h1
+            font-family: PT Mono, sans-serif
+            font-weight: 700
+            font-size: 24px
+            line-height: 130%
+            color: #000
+            text-transform: unset
+            margin-bottom: 40px
+
+        div.image
+            background: #f3f3f3
+            width: calc(100% + 50px)
+            margin-left: -25px
+            padding: 0 25px
+            padding-bottom: 41px
+            img
+                width: 100%
+                height: 320px
+                object-fit: contain
+                margin-top: -70px
+                margin-bottom: -20px
+                transform: rotate(-25deg)
+            span
+                font-family: PT Mono, sans-serif
+                font-weight: 700
+                font-size: 20px
+                line-height: 130%
+                color: #000
+
+        div.list
+            counter-reset: list
+            display: grid
+            grid-gap: 18px
+            margin-top: 23px
+            margin-bottom: 8px
+            div
+                counter-increment: list
+                display: grid
+                align-items: center
+                grid-template-columns: max-content 1fr
+                grid-gap: 21px
+                span
+                    font-family: Cera Pro, sans-serif
+                    font-weight: 400
+                    font-size: 14px
+                    line-height: 150%
+                    color: #000
+                &::before
+                    content: counter(list)
+                    display: block
+                    width: 64px
+                    height: 64px
+                    display: grid
+                    align-items: center
+                    justify-items: center
+                    text-align: center
+                    font-family: PT Mono, sans-serif
+                    font-weight: 700
+                    font-size: 24px
+                    line-height: 130%
+                    color: #000
+                    background: #FFCC00
+                    border-radius: 999px
+
+        small
+            display: block
+            font-family: PT Mono, sans-serif
+            font-weight: 400
+            font-size: 20px
+            line-height: 130%
+            color: #000
+            margin-left: 81px
+            margin-bottom: 30px
+
+        button
+            width: max-content
+            border: unset
+            border-radius: 19px
+            height: 57px
+            width: 100%
+            background: #ffcd00
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.15), 0 32px 32px 0 rgba(0, 0, 0, 0.13), 0 72px 43px 0 rgba(0, 0, 0, 0.08), 0 128px 51px 0 rgba(0, 0, 0, 0.02), 0 199px 56px 0 rgba(0, 0, 0, 0)
+            font-weight: 400
+            font-size: 20px
+            color: #000
+            padding: 17px 48px
+
+section.gift_order
+    div.center
+        display: grid
+
+    div.crumbs
+        display: flex
+        flex-wrap: wrap
+        gap: 5px
+        align-items: center
+        margin-bottom: 32px
+        margin-top: 30px
+
+        div.divide
+            width: 20px
+            height: 1px
+            background: black
+
+        a
+            font-weight: 400
+            font-size: 12px
+            line-height: 130%
+            color: #000
+        
+        span
+            font-weight: 400
+            font-size: 12px
+            line-height: 130%
+            color: #fc0
+
+    h1
+        font-family: PT Mono, sans-serif
+        font-weight: 700
+        font-size: 24px
+        line-height: 130%
+        color: #000
+        text-transform: unset
+        margin-bottom: 40px
+
+    div.what, div.from, div.to
+        display: grid
+        grid-gap: 10px
+        span
+            font-weight: 400
+            font-size: 14px
+            line-height: 150%
+            color: #000
+
+    div.from, div.to
+        margin-top: 10px
+
+    form
+        display: grid
+        grid-gap: 10px
+        background: #f3f3f3
+        width: calc(100% + 50px)
+        margin-left: -25px
+        padding: 27px 25px 41px
+
+    select
+        appearance: none
+        background: #d9d9d9
+        border-radius: 10px
+        background: #d9d9d9
+        font-weight: 400
+        font-size: 20px
+        line-height: 130%
+        color: #000
+        padding: 7px 11px
+        width: 100%
+        height: max-content
+        border: unset
+    div.select
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            right: 14px
+            display: block
+            width: 8px
+            height: 8px
+            margin-top: -4px
+            background-image: url(../images/select_triangle.svg)
+            background-position: center center
+            background-repeat: no-repeat
+
+    label.checkbox
+        margin-top: 6px
+        padding-left: 40px
+        span:before
+            background: transparent
+            border: 1px solid #acacac
+            border-radius: 10px
+            width: 30px
+            height: 31px
+            margin-top: -15px
+        span:after
+            width: 30px
+            height: 31px
+            background-image: unset
+            margin-top: -15px
+        span
+            font-weight: 400
+            font-size: 14px
+            line-height: 150%
+            color: #000
+        input:checked + span:after
+            background-image: url(../images/gift_tick.svg)
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: 15px 10px
+
+    input[type=text], input[type=email], input[type=tel]
+        border-radius: 10px
+        background: #d9d9d9
+        font-weight: 400
+        font-size: 20px
+        line-height: 130%
+        color: #000
+        padding: 7px 11px
+        width: 100%
+        height: max-content
+        border: unset
+        &::placeholder
+            color: black
+        &:focus
+            &::placeholder
+                color: transparent
+
+    button
+        width: max-content
+        border: unset
+        border-radius: 19px
+        height: 57px
+        width: 100%
+        background: #ffcd00
+        font-weight: 400
+        font-size: 20px
+        color: #000
+        padding: 17px 48px
+        &.border
+            background: transparent
+            border: 1px solid #d9d9d9
+
+section.what
+    background: white
+    padding-top: 60px
+    padding-bottom: 60px
+    +screen(s)
+        padding-top: unset
+        padding-bottom: unset
+    div.center
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 86px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 40px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 40px
+    div
+        display: grid
+        grid-gap: 20px
+    h3
+        text-transform: unset
+        margin-bottom: unset
+        font-family: PT Mono, sans-serif
+        font-weight: 700
+        font-size: 24px
+        line-height: 130%
+        color: #000
+    span
+        font-family: Cera Pro, sans-serif
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        color: #000
+
+section.support
+    margin-top: 40px
+    margin-bottom: 40px
+    +screen(s)
+        margin-top: 20px
+    span
+        display: block
+        max-width: 1000px
+    span, a
+        font-weight: 400
+        font-size: 20px
+        color: #8a8a8a
+        +screen(s)
+            font-size: 14px
+            line-height: 150%
+    a
+        border-bottom-color: #8a8a8a
+        &:hover
+            border-bottom-color: transparent

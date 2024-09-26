@@ -1,0 +1,39 @@
+extends _template.pug
+
+block content
+    section.gift_order
+        div.center
+            div.crumbs
+                a(href="index.html") Главная
+                div.divide
+                span Подарочный сертификат
+            h1 Приобрести сертификат
+            form
+
+                div.what
+                    span Укажите номинал (минимальный 1000 рублей)
+                    div.select
+                        select(name="")
+                            option(value="1000 руб", default) 1000 руб
+                            option(value="2000 руб") 2000 руб
+                            option(value="3000 руб") 3000 руб
+                            option(value="4000 руб") 4000 руб
+
+                div.from
+                    span От кого
+                    input(type="text", placeholder="ФИО")
+                    input(type="email", placeholder="e-mail")
+                    input(type="tel", placeholder="Телефон отправителя")
+
+                label.checkbox
+                    input(type="checkbox", name="anonimus")
+                    span Отправить анонимно
+
+                div.to
+                    span Кому
+                    input(type="tel", placeholder="Телефон отправителя")
+                    input(type="email", placeholder="e-mail")
+
+                button.yellow Купить сертификат
+                button.border Отменить
+
